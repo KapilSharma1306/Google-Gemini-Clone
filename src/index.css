@@ -11,6 +11,9 @@
   display: flex;
   animation: fadeIn 1.5s;
 }
+*::-webkit-scrollbar{
+  display: none;
+}
 
 @keyframes fadeIn {
    0%{

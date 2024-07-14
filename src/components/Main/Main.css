@@ -24,6 +24,10 @@
     margin: auto;
 }
 
+.showContant{
+    height: 70.3vh;
+    overflow-y: scroll;
+}
 .main .greet{
     margin: 10px 0px;
     font-size: 46px;
@@ -41,13 +45,13 @@
 .main .cards{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
-    gap: 15px;
+    gap: 10px;
     padding: 20px;
     margin-bottom: 1rem;
 }
 
 .main .card{
-    height: 150px;
+    height: 200px;
     padding: 15px;
     background-color: #f0f4f9;
     border-radius: 10px;
@@ -72,6 +76,31 @@
     background-color: #dfe4df;
 }
 
+.paraBottom_container{
+    background-color: #f0f4f9;
+    padding: 30px 15px;
+    width: 860px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto 15px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.btns{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    cursor: pointer;
+}
+.btns .btn1,.btn2{
+    font-size: 18px;
+    border: none;
+    color: rgb(32, 65, 235);
+}
 .main-bottom{
     position: absolute;
     bottom: 0;
@@ -112,7 +141,8 @@
 
 .main .bottom-info{
     font-size: 13px;
-    margin: 15px auto;
+    /* margin: 10px auto; */
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -179,6 +209,10 @@
 
 
 @media (max-width:600px) {
+    .main{
+        height: 100vh;
+        overflow-y: hidden;
+    }
     .main-bottom input{
          flex:none;
          width: 150px;
@@ -191,5 +225,59 @@
     }
     .search-box div{
         gap: 5px;
+    }
+    .main .card{
+        width: 14rem;
+        height: 200px;
+    }
+    .main .card p{
+        font-size: 19px;
+    }
+    .main .cards{
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        gap: 65px;
+    }
+    .main .cards::-webkit-scrollbar{
+        display: none;
+    }
+    .main{
+        max-width: 100vw;
+    }
+    .paraBottom_container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .paraBottom_container{
+        background-color: #f0f4f9;
+        padding: 30px 15px;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        border-radius: 15px;
+    }
+    .btns{
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        cursor: pointer;
+    }
+    .btns .btn1,.btn2{
+        font-size: 18px;
+        border: none;
+        color: rgb(32, 65, 235);
+    }
+    .main-bottom{
+        top: 42rem;
+        height: 0px;
+    }
+    .showContant{
+        height: 100vh;
     }
 }

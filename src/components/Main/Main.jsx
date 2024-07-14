@@ -17,13 +17,13 @@ function Main() {
         <div className="main-container">
 
             {!showResult 
-            ? <>
+            ? <div className='showContant'>
               <div className="greet">
-                <p><span>Hello, Kapil</span></p>
+                <p><span>Hello,</span></p>
                 <p>How can I help you today?</p>
             </div>
             <div className="cards">
-                  <div className="card">
+                  <div className="card card1">
                     <p>Suggest beautiful places to see on an upcoming road trip</p>
                     <img src={assets.compass_icon} alt="" />
                   </div>
@@ -40,7 +40,14 @@ function Main() {
                     <img src={assets.code_icon} alt="" />
                   </div>
             </div>
-            </>
+            <div className='paraBottom_container'>
+              <p className='paraBottom'>Humans review some saved chats to improve Google AI. To stop this for future chats, turn off Gemini Apps Activity. If this setting is on, don't enter info you wouldn’t want reviewed or used.</p>
+              <div className="btns">
+                <button className='btn1'>Manage Activity</button>
+                <button className='btn2'>Dismiss</button>
+              </div>
+             </div>
+            </div>
             : <div className='result'>
                    <div className="result-title">
                     <img src={assets.user_icon} alt="" />
